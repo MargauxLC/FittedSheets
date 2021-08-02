@@ -9,6 +9,7 @@
 #if os(iOS) || os(tvOS) || os(watchOS)
 import UIKit
 
+@available(iOSApplicationExtension, unavailable)
 public class SheetTransition: NSObject, UIViewControllerAnimatedTransitioning {
     var presenting = true
     weak var presenter: UIViewController?

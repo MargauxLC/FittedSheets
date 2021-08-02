@@ -9,6 +9,7 @@
 #if os(iOS) || os(tvOS) || os(watchOS)
 import UIKit
 
+@available(iOSApplicationExtension, unavailable)
 extension UIViewController {
     /// The sheet view controller presenting the current view controller heiarchy (if any)
     public var sheetViewController: SheetViewController? {
