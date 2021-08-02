@@ -9,6 +9,7 @@
 #if os(iOS) || os(tvOS) || os(watchOS)
 import UIKit
 
+@available(iOSApplicationExtension, unavailable)
 public class SheetContentViewController: UIViewController {
     
     public private(set) var childViewController: UIViewController
@@ -284,6 +285,7 @@ public class SheetContentViewController: UIViewController {
     }
 }
 
+@available(iOSApplicationExtension, unavailable)
 extension SheetContentViewController: UINavigationControllerDelegate {
     public func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
         navigationController.view.endEditing(true)

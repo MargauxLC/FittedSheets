@@ -9,6 +9,7 @@
 #if os(iOS) || os(tvOS) || os(watchOS)
 import UIKit
 
+@available(iOSApplicationExtension, unavailable)
 public class SheetViewController: UIViewController {
     public private(set) var options: SheetOptions
     
@@ -641,6 +642,7 @@ public class SheetViewController: UIViewController {
     }
 }
 
+@available(iOSApplicationExtension, unavailable)
 extension SheetViewController: SheetViewDelegate {
     func sheetPoint(inside point: CGPoint, with event: UIEvent?) -> Bool {
         let isInOverlay = self.overlayTapView.bounds.contains(point)
@@ -652,6 +654,7 @@ extension SheetViewController: SheetViewDelegate {
     }
 }
 
+@available(iOSApplicationExtension, unavailable)
 extension SheetViewController: UIGestureRecognizerDelegate {
     public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
         // Allowing gesture recognition on a UIControl seems to prevent its events from firing properly sometimes
@@ -688,6 +691,7 @@ extension SheetViewController: UIGestureRecognizerDelegate {
     }
 }
 
+@available(iOSApplicationExtension, unavailable)
 extension SheetViewController: SheetContentViewDelegate {
     func pullBarTapped() {
         // Tapping the pull bar is just for accessibility
@@ -719,6 +723,7 @@ extension SheetViewController: SheetContentViewDelegate {
     }
 }
 
+@available(iOSApplicationExtension, unavailable)
 extension SheetViewController: UIViewControllerTransitioningDelegate {
     public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         transition.presenting = true
